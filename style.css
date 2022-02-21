@@ -1,24 +1,28 @@
 *{
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: #eeddff;
   font-family: 'Lucida Grande' , verdana, sans-serif;
 }
-header,footer{
+
+header, footer{
   background: #323d35;
   color: white;
   font-family: serif;
+  margin: 0;
+  padding: 1rem;
+  
 }
 
-.intro{
+.intro, aside{
   padding: 2rem;
 }
 
-.projects{
+.projects {
   background-color:#ba82ab;
   padding:2rem;
  
@@ -28,16 +32,43 @@ header,footer{
   background-color:#e695db;
   padding: 2rem;
 }
+
+
 .projects li, .labs li {
   border: 3px solid;
   margin: 10px;
   padding: 10px;
   width: 12rem;
   height:12rem;
-  display:flex;
+  display: inline-block;
+  align-items: center;
   
 }
 
-projects ol{
+ol{
   list-style: none;
+  padding:0;
+}
+
+@media screen and (min-width: 600px){
+  
+  body {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 150px 6fr 150px;
+  }
+  
+  header, footer{
+    grid-column: 1/3;
+    margin:0;
+  }
+ 
+  .projects ol{
+    display:flex;
+  }
+  .labs ol{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
 }
