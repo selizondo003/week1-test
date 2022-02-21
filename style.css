@@ -1,0 +1,43 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #eeddff;
+  font-family: 'Lucida Grande' , verdana, sans-serif;
+}
+header,footer{
+  background: #323d35;
+  color: white;
+  font-family: serif;
+}
+
+.intro{
+  padding: 2rem;
+}
+
+.projects{
+  background-color:#ba82ab;
+  padding:2rem;
+ 
+}
+
+.labs{
+  background-color:#e695db;
+  padding: 2rem;
+}
+.projects li, .labs li {
+  border: 3px solid;
+  margin: 10px;
+  padding: 10px;
+  width: 12rem;
+  height:12rem;
+  display:flex;
+  
+}
+
+projects ol{
+  list-style: none;
+}
