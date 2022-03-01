@@ -35,7 +35,7 @@ header, footer{
 
 
 .projects li, .labs li {
-  border: 3px solid;
+  border: 3px solid #52364a;
   margin: 10px;
   padding: 10px;
   width: 12rem;
@@ -71,4 +71,23 @@ ol{
     display:grid;
     grid-template-columns: repeat(3,1fr);
 }
+
+.projects li, .labs li{
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+}
+
+.projects li:hover{
+  border: 8px solid  #52364a;
+  box-shadow: 12px 12px 12px #a86d98;
+  background-color:#d395c2; 
+}
+
+.labs li:hover{
+  border: 8px solid  #52364a;
+  box-shadow: 12px 12px 12px #a86d98;
+  background-color: #f7b0ed; 
+}
+
 }
