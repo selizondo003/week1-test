@@ -61,9 +61,9 @@ a{
 
 .fade{
   animation-name:fadeintro;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-fill-mode:forwards;
-  background: #323d35;
+  background-color: #323d35;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -123,39 +123,49 @@ a{
 }
 
 .projects {
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-name: slidein;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes slidein {
-  from{
+  0%{
     margin-left: 40%;
     width: 100%;
     transform: skewY(-20deg);
   }
 
-  to{
+  80%{
+    margin-left:-10%;
+    width: 100%;
+    transform: skewY(5deg)
+  }
+  100%{
     margin-left: 0%;
     width: 100%;
     transform:  skewY(0deg);
   }
 }
 .labs{
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-name: slideup;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes slideup {
-  from {
+  0% {
     margin-left: -40%;
     width: 100%;
     transform: skewY(20deg);
-    
   }
 
-  to {
+  80%{
+    margin-left:10%;
+    width:100%;
+    transform: skewY(-5deg);
+  }
+
+  100% {
     margin-left: 0%;
     width: 100%;
     transform: skewY(0deg);
