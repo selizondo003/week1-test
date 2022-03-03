@@ -22,6 +22,11 @@ header, footer{
   padding: 2rem;
 }
 
+aside{
+  background-color: #eeddff;
+}
+
+
 .projects {
   background-color:#ba82ab;
   padding:2rem;
@@ -48,6 +53,33 @@ header, footer{
 ol{
   list-style: none;
   padding:0;
+}
+
+a{
+  color:#ffffff;
+}
+
+.fade{
+  animation-name:fadeintro;
+  animation-duration: 2s;
+  animation-fill-mode:forwards;
+  background: #323d35;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@keyframes fadeintro{
+  from{
+    opacity: 1;
+    pointer-events: all;
+  }
+  to{
+    opacity:0;
+    pointer-events:none;
+  }
 }
 
 @media screen and (min-width: 600px){
@@ -87,7 +119,49 @@ ol{
 .labs li:hover{
   border: 8px solid  #52364a;
   box-shadow: 12px 12px 12px #a86d98;
-  background-color: #f7b0ed; 
+  background-color: #dd9cd4; 
+}
+
+.projects {
+  animation-duration: 1.5s;
+  animation-name: slidein;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slidein {
+  from{
+    margin-left: 40%;
+    width: 100%;
+    transform: skewY(-20deg);
+  }
+
+  to{
+    margin-left: 0%;
+    width: 100%;
+    transform:  skewY(0deg);
+  }
+}
+.labs{
+  animation-duration: 1.5s;
+  animation-name: slideup;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideup {
+  from {
+    margin-left: -40%;
+    width: 100%;
+    transform: skewY(20deg);
+    
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    transform: skewY(0deg);
+    
+    
+  }
 }
 
 }
